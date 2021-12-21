@@ -1,6 +1,3 @@
-import React from "react";
-import ReactDom from "react-dom";
-import App from "./Component/App";
 import { createStore } from "redux";
 
 const add = document.getElementById("add");
@@ -14,6 +11,9 @@ function reducer() {
 
 const store = createStore(reducer);
 
+console.log(store);
+console.log(store.getState());
+
 function numberOnDisplay() {
   display.innerHTML = number;
 }
@@ -25,13 +25,6 @@ function minusOne() {
   number -= 1;
   numberOnDisplay();
 }
+
 add.addEventListener("click", addOne);
 minus.addEventListener("click", minusOne);
-
-// ReactDom.render(
-//   <div>
-//     <App />
-//   </div>,
-//   document.getElementById("app")
-// );
-//
