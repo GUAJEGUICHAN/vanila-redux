@@ -1,11 +1,18 @@
 import React from "react";
 import ReactDom from "react-dom";
 import App from "./Component/App";
+import { createStore } from "redux";
 
 const add = document.getElementById("add");
 const minus = document.getElementById("minus");
 const display = document.querySelector("span");
 let number = 0;
+
+function reducer() {
+  return "hello";
+}
+
+const store = createStore(reducer);
 
 function numberOnDisplay() {
   display.innerHTML = number;
